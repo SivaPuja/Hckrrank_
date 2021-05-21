@@ -1,11 +1,6 @@
-#largestofperfectsquarenumbers
 import math as m
 l1=[25,30,12,1521]
 for i in l1:
     s=m.sqrt(i)
-    a=m.pow(i,1/2)
-    p=m.ceil(a)
-    if(s==p):
-        lst=[]
-        lst.append(i)
+lst = [i for i in l1 if(s*s==i)]
 print(max(lst))
