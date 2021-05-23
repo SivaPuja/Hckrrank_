@@ -1,0 +1,24 @@
+try:
+        n=int(input())
+        q=list(map(int,input().split(' ')))
+except ValueError:
+    pass
+try:
+    def check(p):
+        if(str(p) == str(p)[::-1]):
+            s= bin(p).replace("0b","")
+            if(str(s) == str(s)[::-1]):
+                return(11)
+        return(0)
+    for i in q:
+        count=0
+        for j in range(1,i+1):
+            a=check(j)
+            if(a==11):
+                count=count+1
+            if(count>n):
+                break;
+        print(count,end=" ")
+    
+except:
+        pass
